@@ -809,3 +809,25 @@ a .msk span:before{
     height: 100vh;
   }
 }
+
+/* Fullscreen background-video */
+
+.background-video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+iframe {
+  /* optional */
+  width: 100%;
+  height: 100%;
+}
