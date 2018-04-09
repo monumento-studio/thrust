@@ -690,7 +690,7 @@ a .msk span:before{
 
 /* iPad */
 @media screen and (min-width: 40em) and (max-width: 63.9375em){
-  .background-video iframe {
+  .background-video iframe, .op {
     display: none;
   }
   .parentesis-1 {width: 2.2rem;}
@@ -760,7 +760,7 @@ a .msk span:before{
   .fsm h2 span.parentesis {-webkit-transform: translateX(-50%) translateY(-50%);-moz-transform: translateX(-50%) translateY(-50%);-o-transform: translateX(-50%) translateY(-50%);transform: translateX(-50%) translateY(-50%);}
   .fsm-container{display:-webkit-flex;display: flex;flex-direction: column;flex-flow: wrap;height:inherit;}
   .top a{font-size: 1.125rem;}
-  .screen, #grid .w-25 a, #grid img.quote{display:none;}
+  .screen, #grid .w-25 a, #grid img.quote, .op{display:none;}
   .fsm{-webkit-filter:none;-moz-filter:none;-o-filter:none;filter:none;background-size:250% !important}
   .fsm.full-screen{background-size:cover !important;}
   #grid .w-25 button{-webkit-transform:rotate(0);-moz-transform:rotate(0);,-o-transform:rotate(0);transform:rotate(0);color: #33d5ad;}
