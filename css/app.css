@@ -51,7 +51,7 @@ h1, #about h2{
   line-height: 0.65;
   font-weight: 100;
   font-style: normal;
-  margin: 5rem 2rem;
+  margin: 5rem 1.5rem 5rem 2rem;
 }
 
 #about h2{
@@ -66,7 +66,7 @@ h2, h3, h4, h5, p, a, ul, li, button, h1 span {
 }
 
 h1 span{
-  font-size: 0.75rem;
+  font-size: 0.5rem;
   font-weight: 400;
   vertical-align: top;
   color: #33d5ad;
@@ -272,9 +272,8 @@ a .msk span:before{
 #grid img.quote{
   position: fixed;
   width: 30%;
-  max-width: 40rem;
-  top: 53%;
-  left: 45%;
+  top: 50%;
+  left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -316,6 +315,7 @@ a .msk span:before{
 }
 
 .fsm {
+  position: relative;
   width: 25%;
   height: 50%;
   float: left;
@@ -336,6 +336,19 @@ a .msk span:before{
   -webkit-filter: grayscale(100%);
 }
 
+.screen{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.5);
+  -webkit-transition: all .25s ease-in-out;
+  -moz-transition: all .25s ease-in-out;
+  -o-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
+}
+
 .fsm.full-screen{
   cursor: pointer;
   -webkit-filter: grayscale(0);
@@ -351,6 +364,10 @@ a .msk span:before{
   -o-webkit-filter: grayscale(0);
   -webkit-filter: grayscale(0);
 }
+.fsm:hover .screen{
+  background: rgba(0,0,0,0);
+}
+
 .fsm .fa {
   -webkit-transition: 1s;
   -moz-transition: 1s;
@@ -472,7 +489,7 @@ a .msk span:before{
 
 .fsm.slide08{
   background-image:url('../images/slide08.jpg');background-repeat:no-repeat;background-position:center;background-size:cover;
-  z-index: 3;
+  z-index: 2;
 }
 
 .fsm h2.modal-content span.subtitle{
@@ -607,6 +624,10 @@ a .msk span:before{
   width: 100%;
 }
 
+.show-for-small-only{
+  display: none;
+}
+
 
 .c01{
   width: 150px;
@@ -693,25 +714,27 @@ a .msk span:before{
   #diagrama{display:block;}
   #diagrama .diagrama-info{padding: 0 0 10rem 0;}
   a span.msk{line-height: 1.2;}
-  #grid img.quote {width: 50%;top: 52%;left: 50%;}
+  #grid img.quote {width: 50%;}
 }
 
 /* iPhone */
 @media screen and (max-width: 39.9375em){
+  .show-for-small-only{display: block;}
   #nav{padding: 1rem;}
   #logo{width: 6rem;}
   h1 {font-size: 5rem;margin:1rem auto;}
   .main-quote {margin-left:0;}
-  #hero-grid, #hero {height: inherit;overflow: auto;}
+  #hero button.mobile-next{display: block;margin:0 auto;}
   #hero h2{padding: 1rem 2rem;font-size:1.125rem;}
-  #hero .hide-for-large{display: block; margin: 1rem auto;-webkit-transform: rotate(90deg);-moz-transform: rotate(90deg);-o-transform: rotate(90deg);transform: rotate(90deg);}
-  .fsm, #grid .w-25{width: 100%;height: 60%;}
-  #grid{position: relative;overflow: visible;-webkit-transform:translateX(0)!important;-moz-transform:translateX(0)!important;-o-transform:translateX(0)!important;transform:translateX(0)!important;}
+  .fsm, #grid .w-25{width: 50vw;height: 25vh;overflow: hidden;}
   #grid .w-25 {padding: 1.125rem;}
-  #grid .w-25 h2 {font-size: 1.5rem;}
+  #grid .w-25 h2 {font-size: 1rem;}
+  #grid .w-25 a{font-size: 0.65rem;}
+  h1 span{font-size: 5px;}
   .fsm.full-screen .modal-content, .fsm h2.modal-content{width: 100%;}
   .fsm.growing h2.modal-content, .fsm h2.modal-content{left:-100%;}
-  .fsm h2.modal-content{font-size:1rem;}
+  .fsm h2.modal-content{font-size:1rem;display:none;}
+  .fsm.growing h2.modal-content, .fsm.full-screen h2.modal-content{display: block;}
   .fsm h2 span.parentesis{width: 75%;margin-left: 5%;top:40%;}
   .fsm.full-screen h2.modal-content{bottom:0;}
   .diagrama {top: 40%;left: 50%;}
@@ -728,8 +751,20 @@ a .msk span:before{
   #diagrama .columns{bottom:4rem;left:50%;transform:translate(-50%,-50%);-webkit-transform:translateX(-50%);-moz-transform:translateX(-50%);-o-transform:translateX(-50%);transform:translateX(-50%);text-align: center;}
   #about h2{margin:5rem 0;}
   .fsm h2 span.parentesis {-webkit-transform: translateX(-50%) translateY(-50%);-moz-transform: translateX(-50%) translateY(-50%);-o-transform: translateX(-50%) translateY(-50%);transform: translateX(-50%) translateY(-50%);}
-  .fsm-container{height:inherit;}
+  .fsm-container{display:-webkit-flex;display: flex;flex-direction: column;flex-flow: wrap;height:inherit;}
   .top a{font-size: 1.125rem;}
+  .screen, #grid .w-25 a{display:none;}
+  .fsm{-webkit-filter:none;-moz-filter:none;-o-filter:none;filter:none;background-size:250% !important}
+  .fsm.full-screen{background-size:cover !important;}
+  #grid .w-25 button{-webkit-transform:rotate(0);-moz-transform:rotate(0);,-o-transform:rotate(0);transform:rotate(0);color: #33d5ad;}
+  /*#grid, .fsm, .fsm .fa,
+  .fsm h2.modal-content,
+  .fsm.growing h2.modal-content,
+  .fsm.full-screen h2.modal-content,
+  .fsm.shrinking h2.modal-content{
+    transition: 0s;
+    transition-delay: 0s;
+  }*/
 }
 
 
