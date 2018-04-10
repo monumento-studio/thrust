@@ -51,7 +51,7 @@ h1, #about h2{
   line-height: 0.65;
   font-weight: 100;
   font-style: normal;
-  margin: 5rem 1.5rem 5rem 2rem;
+  margin: 5rem 2.5rem 5rem 2rem;
 }
 
 #about h2{
@@ -218,6 +218,10 @@ a .msk span:before{
 
 .parentesis-2{
   width: 5.65rem;
+  -webkit-transform: translateX(-1rem);
+  -moz-transform: translateX(-1rem);
+  -o-transform: translateX(-1rem);
+  transform: translateX(-1rem);
 }
 
 .arrow-next{
@@ -232,7 +236,7 @@ a .msk span:before{
 
 #grid{
 	margin: 0;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -272,7 +276,7 @@ a .msk span:before{
 #grid img.quote{
   z-index: 3;
   position: fixed;
-  width: 30%;
+  width: 40%;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -514,7 +518,35 @@ a .msk span:before{
   transform: translateX(-40%) translateY(-50%);
 }
 /* //Grid */
-/* Diagrama Círculo */
+/* Mobile Footer */
+.mobile-footer{
+  position: relative;
+  display: block;
+  background: #262626;
+  padding: 2rem;
+}
+
+.mobile-footer p{
+  color: #fff;
+  font-weight: 300;
+  line-height: 1.25;
+}
+
+.direccion p{
+  margin-bottom: 0;
+}
+
+.telefono p{
+  font-weight: 200;
+  margin-top: 0;
+}
+
+.mail a{
+  color: #33d5ad;
+  font-weight: 200;
+  line-height: 1.25;
+}
+/* Diagrama Círculo
 #diagrama{
   position: relative;
   width: 100%;
@@ -625,7 +657,7 @@ a .msk span:before{
   width: 100%;
 }
 
-.show-for-small-only{
+.show-for-small-only, .fsm.full-screen .screen{
   display: none;
 }
 
@@ -675,18 +707,8 @@ a .msk span:before{
   height: 600px;
   z-index: -6;
 }
-/* //Diagrama Círculo*/
-/* Life at Thrust */
-#about{
-  position: relative;
-  width: 100%;
-  height: 100%;
-  min-height: 730px;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-/* // Life at Thrust*/
+//Diagrama Círculo*/
+
 
 /* iPad */
 @media screen and (min-width: 40em) and (max-width: 63.9375em){
@@ -723,14 +745,12 @@ a .msk span:before{
 
 /* iPhone */
 @media screen and (max-width: 39.9375em){
-  .background-video iframe {
-    display: none;
-  }
   .show-for-small-only{display: block;}
   #nav{padding: 1rem;}
   #logo{width: 6rem;}
   h1 {font-size: 5rem;margin:1rem auto;}
   .main-quote {margin-left:0;}
+  #hero-grid{height: 100vh;}
   #hero button.mobile-next{display: block;margin:0 auto;}
   #hero h2{padding: 1rem 2rem;font-size:1.125rem;}
   .fsm, #grid .w-25{width: 50vw;height: 25vh;overflow: hidden;}
@@ -760,21 +780,12 @@ a .msk span:before{
   .fsm h2 span.parentesis {-webkit-transform: translateX(-50%) translateY(-50%);-moz-transform: translateX(-50%) translateY(-50%);-o-transform: translateX(-50%) translateY(-50%);transform: translateX(-50%) translateY(-50%);}
   .fsm-container{display:-webkit-flex;display: flex;flex-direction: column;flex-flow: wrap;height:inherit;}
   .top a{font-size: 1.125rem;}
-  .screen, #grid .w-25 a, #grid img.quote, .op{display:none;}
-  .fsm{-webkit-filter:none;-moz-filter:none;-o-filter:none;filter:none;background-size:250% !important}
-  .fsm.full-screen{background-size:cover !important;}
+  .fsm.full-screen .screen, #grid .w-25 a, #grid img.quote, .op, .background-video iframe{display:none;}
+  .fsm{background-size:250% !important}
+  .fsm.growing, .fsm.full-screen{background-size:cover !important;}
   #grid .w-25 button{-webkit-transform:rotate(0);-moz-transform:rotate(0);,-o-transform:rotate(0);transform:rotate(0);color: #33d5ad;}
-  /*#grid, .fsm, .fsm .fa,
-  .fsm h2.modal-content,
-  .fsm.growing h2.modal-content,
-  .fsm.full-screen h2.modal-content,
-  .fsm.shrinking h2.modal-content{
-    transition: 0s;
-    transition-delay: 0s;
-  }*/
-
+  .fsm.slide02{background-position: 52% !important;}
 }
-
 
 /* Loader Thrust */
 
