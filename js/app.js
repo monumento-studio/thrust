@@ -6,13 +6,12 @@ $('document').ready(function(){
 // click to enlarge
 
   $('.w-25').click(function(){
-    $(this).addClass('fullscreen');
-    $(this).css({"z-index":"999"});
+    $(this).toggleClass('fullscreen');
+    $(this).toggleClass('zind');
   });
 
   $('.cerrar').click(function(){
-    $('.w-25').removeClass('fullscreen');
-    $('.w-25').css({"z-index":"0"});
+    
   });
 
   $(document).keydown(function(e){
