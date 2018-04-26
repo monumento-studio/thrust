@@ -746,7 +746,12 @@ button.cerrar{
   .top a{font-size: 1.125rem;}
   .grid-info button{-webkit-transform:rotate(0);-moz-transform:rotate(0);,-o-transform:rotate(0);transform:rotate(0);color: #33d5ad;}
   .container{position: relative;display: block;height: inherit;}
-  .w-25.fullscreen{position: fixed; top: auto;left: auto;}
+
+  .fullscreen {
+    position: fixed !important;
+    top: auto;
+    left: auto;
+  }
 }
 
 /* Loader Thrust */
