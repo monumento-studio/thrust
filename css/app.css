@@ -832,3 +832,10 @@ iframe {
 .zind {
   z-index: 999 !important;
 }
+
+video {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+}

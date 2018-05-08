@@ -64,9 +64,13 @@
     <div id="hero" class="flex" style="background-image: url('images/slide01.jpg');background-size:cover;background-position:center;background-repeat:no-repeat;background-attachment:fixed;">
 
       <div class="background-video">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/6qGtfotrswY?autoplay=1&loop=1&cc_load_policy=1rel=0&amp;controls=0&amp;showinfo=0&playlist=6qGtfotrswY"
-        frameborder="0"
-        allowfullscreen></iframe>
+        <video id="vid" poster="images/slide01.jpg" autoplay="true" muted loop>
+          <source src="video/video.mp4" type="video/mp4">
+          <source src="video/video.webm" type="video/webm">
+        </video>
+        <script>
+            document.getElementById('vid').play();
+        </script>
       </div>
       <div class=op></div>
 
