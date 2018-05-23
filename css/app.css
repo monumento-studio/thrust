@@ -270,6 +270,7 @@ a .msk span:before, button.msk span:before{
 /* Grid */
 .w-25{
   position: absolute;
+  z-index: 0;
   width: 25vw;
   height: 50vh;
   float: left;
@@ -288,6 +289,7 @@ a .msk span:before, button.msk span:before{
   -moz-transition: all .5s ease-in-out;
   -o-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
+  clear: both;
 }
 
 .slide02{
@@ -345,7 +347,7 @@ a .msk span:before, button.msk span:before{
   color: #fff;
   font-size: 1.5rem;
   line-height: 1.3;
-  background: #222;
+  background: #262626;
 }
 
 .w-25 h2{
@@ -407,7 +409,7 @@ button.cerrar{
   font-weight: 200;
   z-index: 1001;
   padding: 3.125rem;
-
+  pointer-events: none
   -webkit-transition: all .5s cubic-bezier(1,0,0,1);
   -moz-transition: all .5s cubic-bezier(1,0,0,1);
   -o-transition: all .5s cubic-bezier(1,0,0,1);
@@ -745,7 +747,12 @@ button.cerrar{
   .top a{font-size: 1.125rem;}
   .grid-info button{-webkit-transform:rotate(0);-moz-transform:rotate(0);,-o-transform:rotate(0);transform:rotate(0);color: #33d5ad;}
   .container{position: relative;display: block;height: inherit;}
-  .w-25.fullscreen{position: fixed;}
+
+  .fullscreen {
+    position: fixed !important;
+    top: auto;
+    left: auto;
+  }
 }
 
 /* Loader Thrust */
@@ -821,4 +828,15 @@ iframe {
   width: 100%;
   height: 100%;
   background: rgba(0,0,0,.75);
+}
+
+.zind {
+  z-index: 999 !important;
+}
+
+video {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
 }
